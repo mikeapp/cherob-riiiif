@@ -69,15 +69,22 @@ class AnnotationListController < ApplicationController
       img_url = "http://127.0.0.1:3000/#{i}"
       html += "<img src=\"#{img_url}\"/>"
     }
+    color = "black"
+    color = note_hash['Color Type'][0] if note_hash['Color Type']
 
     oa = Hash.new
     oa['@id'] = "http://127.0.0.1/annotation/#{project}/#{object}/#{SecureRandom.uuid}"
     oa['@type'] = 'oa:Annotation'
     oa['motivation'] = 'sc:commenting'
     oa['on'] = "http://127.0.0.1:3000/canvas/#{object}#xywh=#{note_hash['xywh']}"
+    oa['stylesheet'] = {
+        "@type": ["oa:CssStyle", "cnt:ContextAsText"],
+        "chars": ".red {color: red;}"
+    }
     oa['resource'] = {
         "@type": "cnt:ContentAsText",
         "format": "text/html",
+        "language": "en",
         "chars": html
     }
     oa
