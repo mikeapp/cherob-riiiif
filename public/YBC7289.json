@@ -1,0 +1,95 @@
+{
+  "@id": "http://127.0.0.1:3000/YBC7289",
+  "@type": "sc:Manifest",
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "label": "YBC7289; tablet; hand tablet; cuneiform; Old Babylonian Period Mathematical Text",
+  "logo": "http://deliver.odai.yale.edu/content/assetid/481311fc751d64c66429015c8a18580590284e21/format/1",
+  "attribution": "<span>Yale University, Yale Babylonian Collection</span>",
+  "description": "The tablet shows a square with both diagonals. A number sign on the upper left indicates that the sides of the square are each 30 units long. Along the diagonal, we find the numerals 1,24,51,10 and 42,25,35, both written, in accordance with the conventions of the Babylonian sexagesimal system, to base 60. The second of these numbers indicates the length of the diagonal. The first number, converted to a decimal, gives 1.414212963, which is very close to v2, that is, 1.414213562. Apparently, the student, to find out the length of the diagonal of a square whose sides were each 30 units long, had calculated 30 [1;24,51,10], which yields 42;25,35. The tablet proves that the Babylonians of the early second millennium BCE knew that the ratio of the side to diagonal in a square is 1 to the square root of 2. They had come to this insight long before the Greek philosopher Pythagoras, who probably lived in the sixth century BCE, established his famous theorem a2 + b2 = c2, which is behind their solution. The tablet demonstrates, moreover, that the mathematicians of the Old Babylonian era had found a remarkably good approximation to v2: 1;24,51,10. The student who wrote the tablet seems to have taken this number from a list of coefficients (one such list is likewise housed in the Yale Babylonian Collection).",
+  "metadata": [
+	    {
+	      "label": "Object",
+	      "value": "tablet; hand tablet; cuneiform; Old Babylonian Period Mathematical Text"
+	    },
+	    {
+	      "label": "Creation",
+	      "value": "Old Babylonian Period (1,900-1,700 B.C.E.); Mesopotamia; written by Babylonian student"
+	    },
+	    {
+	      "label": "Material",
+	      "value": "The cuneiform writing was created by using a sharp stylus pressed into the surface of a soft clay tablet to produce wedge-like impressions representing numbers."
+	    },
+	    {
+	      "label": "Description",
+	      "value": "<span>The tablet shows a square with both diagonals. A number sign on the upper left indicates that the sides of the square are each 30 units long. Along the diagonal, we find the numerals 1,24,51,10 and 42,25,35, both written, in accordance with the conventions of the Babylonian sexagesimal system, to base 60. The second of these numbers indicates the length of the diagonal. The first number, converted to a decimal, gives 1.414212963, which is very close to v2, that is, 1.414213562. Apparently, the student, to find out the length of the diagonal of a square whose sides were each 30 units long, had calculated 30 [1;24,51,10], which yields 42;25,35. The tablet proves that the Babylonians of the early second millennium BCE knew that the ratio of the side to diagonal in a square is 1 to the square root of 2. They had come to this insight long before the Greek philosopher Pythagoras, who probably lived in the sixth century BCE, established his famous theorem a2 + b2 = c2, which is behind their solution. The tablet demonstrates, moreover, that the mathematicians of the Old Babylonian era had found a remarkably good approximation to v2: 1;24,51,10. The student who wrote the tablet seems to have taken this number from a list of coefficients (one such list is likewise housed in the Yale Babylonian Collection). <br/> 1. reflectance transformation imaging (RTI), see files YBC7289_rev.rti and YBC7289_obv.rti  <br/> 2. 3D laser scanning, see file ybc7289.ply<br/>3. high-resolution photography, see files YBC7289_REV.jpgi and YBC7289_OBV.jpg<br/>Benjamin R. Foster Holly Rushmeier (2014) Babylonian Collection Digital Imaging. Available at: http://digitalhumanities.yale.edu/projects/babylonian-collectiondigital-imaging</span>"
+	    }
+    ],
+    "sequences": [
+    {
+      "canvases": [
+        {
+          "@id": "http://127.0.0.1:3000/canvas/YBC7289_OBV",
+          "@type": "sc:Canvas",
+          "height": 3281,
+          "images": [
+            {
+              "@id": "http://127.0.0.1:3000/annotation/YBC7289_OBV",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "on": "http://127.0.0.1:3000/canvas/YBC7289_OBV",
+              "resource": {
+                "@id": "http://127.0.0.1:3000/image/YBC7289_OBV/full/full/0/native.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3281,
+                "label": "YBC7289 obverse",
+                "service": {
+                  "@id": "http://127.0.0.1:3000/image/YBC7289_OBV/",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                },
+                "width": 4896
+              }
+            }
+          ],
+          "otherContent": [
+            {
+              "@id": "http://127.0.0.1:3000/annotationlist/YBC7289/YBC7289_OBV",
+              "@type": "sc:AnnotationList"
+            }
+          ],
+          "label": "YBC7289 obverse",
+          "width": 4896
+        },
+        {
+          "@id": "http://127.0.0.1:3000/canvas/YBC7289_REV",
+          "@type": "sc:Canvas",
+          "height": 3421,
+          "images": [
+            {
+              "@id": "http://127.0.0.1:3000/annotation/YBC7289_REV",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "on": "http://127.0.0.1:3000/canvas/YBC7289_REV",
+              "resource": {
+                "@id": "http://127.0.0.1:3000/image/YBC7289_REV/full/full/0/native.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3421,
+                "label": "YBC7289 reverse",
+                "service": {
+                  "@id": "http://127.0.0.1:3000/image/YBC7289_REV/",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                },
+                "width": 4764
+              }
+            }
+          ],
+          "label": "YBC7289 reverse",
+          "width": 4764
+        }
+    ]
+    }
+    ]
+}
