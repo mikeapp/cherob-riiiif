@@ -20,6 +20,9 @@
 # Ignore Byebug command history file.
 .byebug_history
 
+# IDEA files
+/.idea
+
 # CHER-Ob files
 /examples
 /public/1.png
