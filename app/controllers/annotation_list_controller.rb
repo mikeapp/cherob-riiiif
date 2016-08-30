@@ -53,6 +53,10 @@ class AnnotationListController < ApplicationController
           w = (x1.to_i - x2.to_i).abs
           h = (y1.to_i-y2.to_i).abs
           note_hash['xywh'] = "#{x},#{y},#{w},#{h}"
+          note_hash['x'] = x
+          note_hash['y'] = y
+          note_hash['w'] = w
+          note_hash['h'] = h
        else
          note_hash[key] ||= Array.new
          note_hash[key].push(line.strip!)
@@ -69,23 +73,23 @@ class AnnotationListController < ApplicationController
       img_url = "http://127.0.0.1:3000/#{i}"
       html += "<img src=\"#{img_url}\"/>"
     }
+    html += '</span>'
     color = "black"
     color = note_hash['Color Type'][0] if note_hash['Color Type']
+    rect = "<rect width=\"#{note_hash['w']}\" height=\"#{note_hash['h']}\" style=\"stroke-width:3;stroke:rgb(200,0,0)\" />"
+    svg = "<svg>#{rect}</svg>"
 
     oa = Hash.new
-    oa['@id'] = "http://127.0.0.1/annotation/#{project}/#{object}/#{SecureRandom.uuid}"
+    oa['@id'] = "http://127.0.0.1/annotation/#{project}/#{object}/#{filename}"
     oa['@type'] = 'oa:Annotation'
     oa['motivation'] = 'sc:commenting'
     oa['on'] = "http://127.0.0.1:3000/canvas/#{object}#xywh=#{note_hash['xywh']}"
-    oa['stylesheet'] = {
-        "@type": ["oa:CssStyle", "cnt:ContextAsText"],
-        "chars": ".red {color: red;}"
-    }
+    # oa['on'] = { "selector": { "value": svg } }
     oa['resource'] = {
-        "@type": "cnt:ContentAsText",
-        "format": "text/html",
-        "language": "en",
-        "chars": html
+            "@type": "cnt:ContentAsText",
+            "format": "text/html",
+            "language": "en",
+            "chars": html
     }
     oa
   end
